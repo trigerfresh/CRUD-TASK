@@ -52,7 +52,7 @@ const Student = () => {
     formData.append('marks', marks)
     formData.append('img', image)
 
-    let url = 'https://crud-mysql-task-3-3.onrender.com/students'
+    let url = 'backend-url/students'
     axios
       .post(url, formData)
       .then((response) => {
