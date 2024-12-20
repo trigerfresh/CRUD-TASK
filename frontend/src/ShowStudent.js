@@ -10,7 +10,7 @@ const ShowStudent = () => {
   useEffect(() => {
     const showUsers = async () => {
       try {
-        let url = 'https://crud-mysql-task-3-3.onrender.com/show'
+        let url = 'backend-url/show'
         let res = await axios.get(url)
         setUsers(res.data)
         console.log(res.data)
@@ -24,7 +24,7 @@ const ShowStudent = () => {
 
   const hDelete = (r_no) => {
     try {
-      let url = `https://crud-mysql-task-3-3.onrender.com/delete/${r_no}`
+      let url = `backend-url/delete/${r_no}`
       const res = axios.delete(url)
       setUsers(users.filter((user) => user.r_no !== r_no))
     } catch (err) {
