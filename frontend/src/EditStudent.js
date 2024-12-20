@@ -20,7 +20,7 @@ const EditStudent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = `https://crud-mysql-task-3-3.onrender.com/show/${r_no}`
+        let url = `backend-url/show/${r_no}`
         const res = await axios.get(url)
         setStudent(res.data)
         console.log(res.data)
