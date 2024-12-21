@@ -20,7 +20,7 @@ const EditStudent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = `backend-url/show/${r_no}`
+        let url = `https://crud-mysql-task-3-3.onrender.com/show/${r_no}`
         const res = await axios.get(url)
         setStudent(res.data)
         console.log(res.data)
@@ -57,7 +57,7 @@ const EditStudent = () => {
     if (student.img) formData.append('img', student.img)
 
     try {
-      let url = `backend-url/update/${r_no}`
+      let url = `https://crud-mysql-task-3-3.onrender.com/update/${r_no}`
       const res = await axios.put(url, formData)
       console.log(res.data)
       navigate('/show')
