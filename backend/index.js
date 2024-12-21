@@ -40,7 +40,7 @@ db.connect((err) => {
   }
 })
 
-app.post('/students', upload.single('img'), (req, res) => {
+app.post(baseUrl + '/students', upload.single('img'), (req, res) => {
   const { r_no, name, marks } = req.body
   const img = req.file ? req.file.path : null
 
